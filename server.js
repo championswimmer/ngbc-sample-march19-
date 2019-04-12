@@ -4,6 +4,8 @@ app.get('/', (req, res) => {
   res.send('Hello World')
 })
 
-app.listen(4444, () => {
-  console.log('Started on http://localhost:4444')
+const PORT = process.env.PORT || 4444
+
+app.listen(PORT, () => {
+  console.log(`Started on http://localhost:${PORT}`)
 })
